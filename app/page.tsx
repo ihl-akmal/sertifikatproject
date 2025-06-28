@@ -228,7 +228,7 @@ export default function CertificateValidation() {
               </form>
 
               {/* Debug Button */}
-              <div className="mt-4 text-center">
+              {/* <div className="mt-4 text-center">
                 <Button
                   onClick={handleDebug}
                   variant="outline"
@@ -238,7 +238,7 @@ export default function CertificateValidation() {
                   <Bug className="w-4 h-4 mr-2" />
                   Debug Data
                 </Button>
-              </div>
+              </div> */}
             </CardContent>
           </Card>
 
