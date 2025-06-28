@@ -148,13 +148,13 @@ export default function CertificateValidation() {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-lg mx-auto">
           {/* Connection Status */}
-          <div className="mb-6">
+          {/* <div className="mb-6">
             <ConnectionStatus
               status={connectionStatus}
               isConfigured={SupabaseRealtimeService.getConnectionStatus().isConfigured}
               participantCount={totalParticipants}
             />
-          </div>
+          </div> */}
 
           {/* Setup Guide - show when Supabase not configured */}
           {!SupabaseRealtimeService.getConnectionStatus().isConfigured && (
@@ -169,7 +169,7 @@ export default function CertificateValidation() {
             <div className="bg-gradient-to-r from-pink-600 to-pink-500 px-8 py-6 text-center">
               <h1 className="text-2xl font-bold text-white mb-2">Validasi Sertifikat</h1>
               <p className="text-pink-100">Verifikasi keaslian sertifikat peserta</p>
-              <div className="mt-2 flex items-center justify-center space-x-2">
+              {/* <div className="mt-2 flex items-center justify-center space-x-2">
                 <div
                   className={`w-2 h-2 rounded-full ${
                     connectionStatus === "connected"
@@ -190,7 +190,7 @@ export default function CertificateValidation() {
                         ? "Connection Error"
                         : "Local Mode"}
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Form Section */}
@@ -335,7 +335,7 @@ export default function CertificateValidation() {
       <div className="bg-white border-t border-gray-200 mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-gray-600">
-            <p>© 2024 Grazedu - Great Zilenial Education. Semua hak dilindungi.</p>
+            <p>© 2024 PT. Grazedu Cerdas Indonesia. Semua hak dilindungi.</p>
           </div>
         </div>
       </div>
