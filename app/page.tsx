@@ -5,9 +5,8 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, XCircle, Bug } from "lucide-react"
+import { CheckCircle, XCircle } from "lucide-react"
 import { SupabaseRealtimeService, type Participant } from "@/lib/supabase-realtime"
-import { ConnectionStatus } from "@/components/connection-status"
 import { ClientStorage } from "@/lib/client-storage"
 import { SetupGuide } from "@/components/setup-guide"
 
@@ -130,31 +129,14 @@ export default function CertificateValidation() {
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
-      {/* Header */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-center">
-            <div className="flex items-center justify-center">
-              <div className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-6 py-3 rounded-lg">
-                <h1 className="text-2xl font-bold">GRAZEDU</h1>
-                <p className="text-sm text-pink-100">Great Zilenial Education</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-lg mx-auto">
-          {/* Connection Status */}
-          {/* <div className="mb-6">
-            <ConnectionStatus
-              status={connectionStatus}
-              isConfigured={SupabaseRealtimeService.getConnectionStatus().isConfigured}
-              participantCount={totalParticipants}
-            />
-          </div> */}
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img
+              src="/logo.png" alt="Company Logo" className="h-16 w-auto"/>
+          </div>
 
           {/* Setup Guide - show when Supabase not configured */}
           {!SupabaseRealtimeService.getConnectionStatus().isConfigured && (
@@ -168,7 +150,7 @@ export default function CertificateValidation() {
             {/* Header Section */}
             <div className="bg-gradient-to-r from-pink-600 to-pink-500 px-8 py-6 text-center">
               <h1 className="text-2xl font-bold text-white mb-2">Validasi Sertifikat</h1>
-              <p className="text-pink-100">Verifikasi keaslian sertifikat peserta</p>
+              <p className="text-pink-100">Verifikasi keaslian sertifikat kelas Grazedu disini</p>
               {/* <div className="mt-2 flex items-center justify-center space-x-2">
                 <div
                   className={`w-2 h-2 rounded-full ${
@@ -233,7 +215,7 @@ export default function CertificateValidation() {
                   onClick={handleDebug}
                   variant="outline"
                   size="sm"
-                  className="border-gray-300 text-gray-600 hover:bg-gray-100"
+                  className="border-gray-300 text-gray-600 hover:bg-gray-100 bg-transparent"
                 >
                   <Bug className="w-4 h-4 mr-2" />
                   Debug Data
